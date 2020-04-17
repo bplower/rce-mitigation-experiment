@@ -28,6 +28,8 @@ Start the service with no protections: `make run`. Now in a separate shell run t
     make server-read-process
     ```
 
+![Example](./env.cast.svg)
+
 ### Env var protections
 
 Start the service with environment variable protections with `make run-protect-env`.
@@ -42,6 +44,8 @@ Start the service with environment variable protections with `make run-protect-e
     make server-read-settings
     ```
 
+![Example](./env.cast.svg)
+
 ### File protections
 
 Start the service with file protections (also includes env var protections). In this case, the settings file "self destructs" after being read. Since the container stops after the process stops, this self destructing file works for us (except in cases with multiple gunicorn workers, but I'm working on that).
@@ -55,6 +59,8 @@ Start the service with file protections (also includes env var protections). In 
     ```
     make server-read-inmem-config
     ```
+
+![Example](./file.cast.svg)
 
 ## WIP Conclusion
 
